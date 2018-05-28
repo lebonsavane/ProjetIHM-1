@@ -1,5 +1,5 @@
-#ifndef CARTE_H
-#define CARTE_H
+#ifndef CASE_H
+#define CASE_H
 
 #include <string>
 #include <iostream>
@@ -7,7 +7,7 @@
 
 using namespace std;
 
-/**  ==================  CARTE.H  ==============
+/**  ==================  CASE.H  ==============
      -------------------------------------------
     Les fichiers images représentant les figures des cartes sont nommés de la manière suivante :
     nomCollection_0.type,
@@ -34,65 +34,5 @@ Lien avec les constantes du programme (fichier constantesCommmunes.h :
 L'attribut nbrImages doit être < NB_MAX_IMAGES_COLLECTION
 */
 
-class Carte
-{
-    public:
-        enum UnEtatCarte {indetermine, faceVisible, faceNonVisible};
-        /// valeurs posssibles :
-         /* - sur le Plateau : faceVisible, faceNonVisible
-            - hors plateau : indetermine
-            */
-       ///* Constructeurs  et destructeur */
-        Carte(std::string nFace); // avec nom de carte
-        Carte();
-        virtual ~Carte();
 
-        /// GETTERS - Méthodes d'instances
-        string getNomFace(); // retourne le nom de la face
-        UnEtatCarte getEtat(); // retourne l'état de la carte
-
-        /// SETTERS - Méthodes d'instance
-        void retourner();
-            // bascule l'attribut etatCarte entre faceVisible et faceNonVisible
-        void setEtat (UnEtatCarte etat);
-            // affecte l'attribut etatCarte de la valeur du paramètre etat
-        void setNomFace (string nFace);
-            // affecte l'attribut nomFace de la valeur du paramètre nFace
-
-        /// Getteurs COMMUNS à TOUTS les CARTES = Méthodes de classe = Méthodes statiques
-        static string getNomCollection();
-            // retourne l'attribut nomCollection
-        static unsigned short int getNbCartesCollection();
-            // retourne l'attribut nbCartesCollection
-        static string getTypeImage();
-            // retourne l'attribut typeImage
-        static string getNomDos();
-            // retourne l'attribut nomDos
-
-        /// Setteurs COMMUNS à TOUTS les CARTES = Méthodes de classe = Méthodes statiques
-        static void setNomCollection (string nomCol);
-        static void setTypeImage (string typeIm);
-        static void setNbCartesCollection (unsigned short int nbCa);
-          // Post-condition: nbCartesCollection <= NB_MAX_IMAGES_COLLECTION
-        static void setNomDos(string nDos);
-
-    private:
-        UnEtatCarte etatCarte;
-
-        string nomFace;
-          // nom du fichier image de la face
-
-        ///* COMMUN à TOUTES LES CARTES = ATTRIBUTS DE CLASSE = Attributs statiques */
-        static string nomCollection;
-          // racine du nom de fichier. Exemple : "Disney"
-        static string typeImage;
-          // Exemple : "gif", "png", ...
-        static unsigned short int nbCartesCollection;
-          // nbre de cartes de la collection.
-        static string nomDos;
-          /* nom de l'image utilisée pour le dos de toutes les cartes
-             L'image utilisée pour le dos est celle numérotée 0
-             Exemple : "Disney_0.gif" pour l'image de dos de la collection Disney
-             */
-};
-#endif // CARTE_H
+#endif // CASE_H
