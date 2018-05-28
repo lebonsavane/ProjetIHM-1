@@ -3,6 +3,7 @@
 
 #include <string>
 #include <iostream>
+#include "carte.h"
 #include <wx/msgdlg.h> // pour les wxMessageBx()
 
 using namespace std;
@@ -34,5 +35,24 @@ Lien avec les constantes du programme (fichier constantesCommmunes.h :
 L'attribut nbrImages doit être < NB_MAX_IMAGES_COLLECTION
 */
 
+
+class Case {
+
+public:
+    enum UnEtatCase{libre=0, occupee};
+    Case();                 //ctor
+    virtual ~Case();        //dtor
+    UnEtatCase getEtatCase();
+    Carte* getElementCase();
+    void setElementCase(Carte*);
+    void setEtatCase(UnEtatCase);
+
+private:
+    UnEtatCase etatCase;
+    Carte* elementCase;
+
+};
+
+#endif //CASE_H
 
 #endif // CASE_H
