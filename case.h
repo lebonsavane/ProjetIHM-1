@@ -54,5 +54,3 @@ private:
 };
 
 #endif //CASE_H
-
-#endif // CASE_H
