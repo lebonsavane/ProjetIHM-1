@@ -60,14 +60,6 @@ class Memory {
     int nbPaireTrouvee;
     int nbCoups;
 
- public:
-
-    /**
-     * @element-type Carte
-     */
-    Carte *myCarte[ 0];
-
-    Plateau composition;
 };
 
 #endif // Memory_h
