@@ -18,6 +18,7 @@ class MemoryPrincipale : public wxFrame
     wxSizer *sizerBottom;
     wxSizer *sizerScore;
     wxSizer *sizerButton;
+/** rajouter sizer grind pour les cartes **/
 
     //button
      wxButton *btnD&A;
