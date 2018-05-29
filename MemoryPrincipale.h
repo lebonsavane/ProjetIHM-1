@@ -12,6 +12,18 @@ class MemoryPrincipale : public wxFrame
     
   //destructeur
     virtual ~MemoryPrincipale();
+
+   //sizers
+    wxSizer *sizerMain;
+    wxSizer *sizerBottom;
+    wxSizer *sizerScore;
+    wxSizer *sizerButton;
+
+    //button
+     wxButton *btnD&A;
+   
+   //textes
+    wxTextcontrol *tempsM;
 }
 
 #endif //PRINCIPALE_H
