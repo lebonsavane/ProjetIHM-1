@@ -25,6 +25,11 @@ class MemoryPrincipale : public wxFrame
    
    //textes
     wxTextcontrol *tempsM;
+    wxTextcontrol *tempsR;
+    wxTextcontrol *coups;
+    wxTextcontrol *lblTempsM;
+    wxTextcontrol *lblTempsR;
+    wxTextcontrol *lblCoups;
 }
 
 #endif //PRINCIPALE_H
