@@ -27,9 +27,11 @@ class MemoryPrincipale : public wxFrame
     wxTextcontrol *tempsM;
     wxTextcontrol *tempsR;
     wxTextcontrol *coups;
+    wxTextcontrol *paires;
     wxTextcontrol *lblTempsM;
     wxTextcontrol *lblTempsR;
     wxTextcontrol *lblCoups;
+    wxTextcontrol *lblPaires;
 }
 
    //Table d'évenements
