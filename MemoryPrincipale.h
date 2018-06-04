@@ -24,14 +24,14 @@ class MemoryPrincipale : public wxFrame
      wxButton *btnD&A;
    
    //textes
-    wxTextcontrol *tempsM;
-    wxTextcontrol *tempsR;
-    wxTextcontrol *coups;
-    wxTextcontrol *paires;
-    wxTextcontrol *lblTempsM;
-    wxTextcontrol *lblTempsR;
-    wxTextcontrol *lblCoups;
-    wxTextcontrol *lblPaires;
+    wxStaticText *tempsM;
+    wxStaticText *tempsR;
+    wxStaticText *coups;
+    wxStaticText *paires;
+    wxStaticText *lblTempsM;
+    wxStaticText *lblTempsR;
+    wxStaticText *lblCoups;
+    wxStaticText *lblPaires;
 }
 
    //Table d'évenements
