@@ -12,4 +12,5 @@ SizerBottom = new wxBoxSizer(wxHORIZONTAL);
 SizerMain = new wxBoxSizer(wxVERTICAL);
 
 SizerButton -> Add (BtnD&A, 0, wxALIGN_RIGHT, 5);
-SizerScore -> Add (lbl
+SizerScore -> Add (lblTempsR, 1, wxALIGN_LEFT, 5);
+SizerScore -> Add (lblPaire
