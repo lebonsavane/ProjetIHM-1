@@ -32,4 +32,7 @@ class MemoryPrincipale : public wxFrame
     wxTextcontrol *lblCoups;
 }
 
+   //Table d'évenements
+    DECLARE_EVENT_TABLE()
+
 #endif //PRINCIPALE_H
