@@ -1,4 +1,5 @@
 
+# 
 #ifndef Memory_h
 #define Memory_h
 
@@ -12,6 +13,7 @@ class Carte;
 class Memory {
 
  public:
+    virtual void actualisation();
 
     virtual int getTempsMax();
 
