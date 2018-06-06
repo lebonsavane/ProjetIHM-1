@@ -1,5 +1,7 @@
 #include "Memory.h"
 #include "MemoryPrincipale.h"
+#include "MemoryApp.h"
+#include "ConstantesCommunes.h"
 
 BEGIN_EVENT_TABLE (MemoryPrincipale, wxFrame)
   wxEVT_CLOSE(          ,MemoryPrincipale::OnClose)
