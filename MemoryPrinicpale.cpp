@@ -2,17 +2,25 @@
 #include "MemoryPrincipale.h"
 
 BEGIN_EVENT_TABLE (MemoryPrincipale, wxFrame)
-  wxEVT_BUTTON(/*id*/,MemoryPrincipale::/*méthode commencer*/)
-  wxEVT_BUTTON(/*id*/,MemoryPrincipale::/*méthode abandonner*/)
+  wxEVT_CLOSE(          ,MemoryPrincipale::OnClose)
+  wxEVT_BUTTON(wxID_ANY,MemoryPrincipale::OnBegin)
+  wxEVT_BUTTON(wxID_ANY,MemoryPrincipale::OnGiveUp)
+  wxEVT_TIMER(TIMER_ID,MemoryPrincipale::OnTimer)
 END_EVENT_TABLE ()
 
-MemoryPrincipale::MemoryPrincipale(const wxString title) : wxFrame(NULL, wxID_ANY, title)
+MemoryPrincipale::MemoryPrincipale(const wxString title) 
+  : wxFrame(NULL, wxID_ANY, title),
+    m_timer(this,TIMER_ID)
 {
+      
+  //timer
+    m_timer.Start(1000);    // 1 seconde d'intervalle
+      
   //text
-  tempsM = new wxStaticText(this, wxID_ANY, wxT("Temps mis :"));
-  TempsR = new wxStaticText(this, wxID_ANY, wxT("Temps restant :"));
-  coups = new wxStaticText(this, wxID_ANY, wxT("Coups joués :"));
-  paires = new wxStaticText(this, wxID_ANY, wxT("paires trouvés :"));
+  lblTempsM = new wxStaticText(this, wxID_ANY, wxT("Temps mis :"));
+  lblTempsR = new wxStaticText(this, wxID_ANY, wxT("Temps restant :"));
+  lblCoups = new wxStaticText(this, wxID_ANY, wxT("Coups joués :"));
+  lblPaires = new wxStaticText(this, wxID_ANY, wxT("paires trouvés :"));
   
   
   //sizers
@@ -21,7 +29,7 @@ MemoryPrincipale::MemoryPrincipale(const wxString title) : wxFrame(NULL, wxID_AN
   SizerBottom = new wxBoxSizer(wxHORIZONTAL);
   SizerMain = new wxBoxSizer(wxVERTICAL);
 
-  SizerButton -> Add (BtnD&A, 0, wxALIGN_RIGHT, 5);
+  SizerButton -> Add (btnDA, 0, wxALIGN_RIGHT, 5);
   SizerScore -> Add (lblTempsR, 1, wxALIGN_LEFT, 5);
   SizerScore -> Add (tempsR,1,wxALIGN_LEFT,5);
   SizerScore -> Add (lblPaires, 1, wxALIGN_LEFT, 5);
@@ -36,4 +44,20 @@ MemoryPrincipale::MemoryPrincipale(const wxString title) : wxFrame(NULL, wxID_AN
 MemoryPrincipale::~MemoryPrincipale()
 {
   //dtor
+}
+
+void MemoryPrincipale::OnClose(event)
+{
+}
+
+void MemoryPrincipale::OnBegin(event)
+{
+}
+
+void MemoryPrincipale::OnGiveUp(event)
+{
+}
+
+void MemoryPrincipale::OnTimer(event)
+{
 }
