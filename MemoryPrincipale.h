@@ -2,6 +2,10 @@
 #define PRINCIPALE_H
 
 #include <wx/wx.h>
+#include <wx/sizer.h>
+#include <wx/bmpbuttn.h>
+#include <wx/frame.h>
+
 
 class MemoryPrincipale : public wxFrame
 {
@@ -12,18 +16,26 @@ class MemoryPrincipale : public wxFrame
     
   //destructeur
     virtual ~MemoryPrincipale();
+    
+  //timer
+    void OnTimer(wxTimerEvent& event); 
 
-   //sizers
+  private:
+    
+  //timer
+    wxTimer m_timer;
+    
+  //sizers
     wxSizer *sizerMain;
     wxSizer *sizerBottom;
     wxSizer *sizerScore;
     wxSizer *sizerButton;
-/** rajouter sizer grind pour les cartes **/
+  
 
-    //button
+  //button
      wxButton *btnDA;
-   
-   //textes
+    
+  //textes
     wxStaticText *tempsM;
     wxStaticText *tempsR;
     wxStaticText *coups;
@@ -32,13 +44,9 @@ class MemoryPrincipale : public wxFrame
     wxStaticText *lblTempsR;
     wxStaticText *lblCoups;
     wxStaticText *lblPaires;
-    
-    
-   //timer
-   void OnTimer(wxTimerEvent& event); 
-}
 
-   //Table d'évenements
+  //Table d'évenements
     DECLARE_EVENT_TABLE()
 
+}
 #endif //PRINCIPALE_H
