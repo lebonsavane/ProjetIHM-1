@@ -21,7 +21,7 @@ class MemoryPrincipale : public wxFrame
 /** rajouter sizer grind pour les cartes **/
 
     //button
-     wxButton *btnD&A;
+     wxButton *btnDA;
    
    //textes
     wxStaticText *tempsM;
@@ -32,6 +32,10 @@ class MemoryPrincipale : public wxFrame
     wxStaticText *lblTempsR;
     wxStaticText *lblCoups;
     wxStaticText *lblPaires;
+    
+    
+   //timer
+   void OnTimer(wxTimerEvent& event); 
 }
 
    //Table d'évenements
