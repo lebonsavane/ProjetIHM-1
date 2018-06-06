@@ -23,9 +23,13 @@ class MemoryPrincipale : public wxFrame
   //événements de partie
     void OnBegin(wxCommandEvent& event);
     void OnGiveUp(wxCommandEvent& event);
+    void OnClose(wxCloseEvent& event);
     
 
   private:
+  
+  //ID
+  
   //timer
     wxTimer m_timer;
     
