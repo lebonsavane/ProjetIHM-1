@@ -20,9 +20,9 @@ class Memory{
 
     virtual void setEtat(etatJeu UnEtatMemory);
 
-    virtual void setTempsMax(int tempsMax);
+    virtual void setTempsMax(int temps);
 
-    virtual void setTempsRestant(int tempsRestant);
+    virtual void setTempsRestant(int temps);
 
     virtual etatJeu getEtatJeu();
 
