@@ -25,7 +25,7 @@ virtual etatJeu Memory::getEtatJeu()
  return etatJeu;  
 }
 
-virtual Plateau Memory::etLePlateau()
+virtual Plateau Memory::getLePlateau()
 {
  return 
 }
@@ -75,12 +75,12 @@ virtual void Memory::getPaireTrouvee()
 
 }
 
-virtual void Memory::setCoups(int nbCoups)
+virtual void Memory::setCoups(int coups)
 {
-
+this->nbCoups = coups
 }
 
 virtual void Memory::getCoups()
 {
-   return this -> MemoryPrincipale::
+   return this -> nbCoups ;
 }
