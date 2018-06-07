@@ -26,7 +26,7 @@ class Memory{
 
     virtual etatJeu getEtatJeu();
 
-    virtual Plateau etLePlateau();
+    virtual Plateau getLePlateau();
 
     virtual int getNbCarteUtilisee();
 
