@@ -43,8 +43,9 @@ MemoryPrincipale::MemoryPrincipale(const wxString title)
   SizerScore -> Add (tempsR, 1, wxALIGN_LEFT, 5);
       
       
-  //boutons grilles
-      
+   //boutons grilles
+     
+       wxString bouton1;
        ID_BITMAPBUTTON1 = wxNewId();
 
             // création du bouton, l'image initiale utilisée est celle du dos de la carte représentée
@@ -66,6 +67,32 @@ MemoryPrincipale::MemoryPrincipale(const wxString title)
                                     1,
                                     wxALL | wxEXPAND,
                                     5);
+      
+              
+      
+             wxString bouton2;
+             ID_BITMAPBUTTON2 = wxNewId();
+
+            // création du bouton, l'image initiale utilisée est celle du dos de la carte représentée
+            bouton2 = wxT("");
+            bouton2 << ID_BITMAPBUTTON2;  // détermination du nom du bouton
+
+            boutonACliquer2 = new wxBitmapButton(
+                                            this,
+                                            ID_BITMAPBUTTON2,
+                                            wxBitmap(image.Scale(80,80)),  // possibilité de définir la taille de l'image dans le bouton
+                                            wxDefaultPosition,
+                                            wxDefaultSize,
+                                            wxBU_AUTODRAW,
+                                            wxDefaultValidator,
+                                            bouton2);
+
+            // ajout du bouton dans son sizer
+            sizerGrillePlateau->Add(boutonACliquer2,
+                                    1,
+                                    wxALL | wxEXPAND,
+                                    5);
+  
   
 }
 
