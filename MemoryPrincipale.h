@@ -38,6 +38,7 @@ class MemoryPrincipale : public wxFrame
     wxSizer *sizerBottom;
     wxSizer *sizerScore;
     wxSizer *sizerButton;
+    wxGridSizer* sizerGrillePlateau;
   
 
   //button
