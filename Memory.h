@@ -17,7 +17,7 @@ class Memory : public MemoryPrincipale, MemoryApp{
 
     virtual int getTempsMax();
 
-    virtual int tempsRestant();
+    virtual int getTempsRestant();
 
     virtual void setEtat(etatJeu UnEtatMemory);
 
