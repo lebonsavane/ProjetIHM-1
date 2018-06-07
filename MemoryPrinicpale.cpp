@@ -63,8 +63,8 @@ void MemoryPrincipale::OnGiveUp(event)
 void MemoryPrincipale::OnTimer(event)
 {
   int i = TEMPS_MAX_ALLOUE;
-  while((int) tempsR > 0){
-    tempsR = tempsR << i;
-    i++;
+  while( i > 0){
+    tempsR << "" i;
+    i--;
   }
 }
