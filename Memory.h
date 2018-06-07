@@ -42,11 +42,11 @@ class Memory{
 
     virtual void setNbCarteUtilisee();
 
-    virtual void setPaireTrouvee(int PaireTrouvee);
+    virtual void setPaireTrouvee(int paireTrouvee);
 
     virtual void getPaireTrouvee();
 
-    virtual void setCoups(int Coups);
+    virtual void setCoups(int coups);
 
     virtual void getCoups();
 
