@@ -88,9 +88,10 @@ void MemoryPrincipale::OnGiveUp(event)
 
 void MemoryPrincipale::OnTimer(event)
 {
+ void MemoryPrincipale::OnTimer(event)
+{
   int i = TEMPS_MAX_ALLOUE;
-  while( i > 0){
-    tempsR << "" i;
-    i--;
+  while( i >= 0){
+    tempsR -> SetLabel(i);
   }
 }
