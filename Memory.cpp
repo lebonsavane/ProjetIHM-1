@@ -1,20 +1,4 @@
 #include "Memory.h"
-/*
-void Memory::actualisation()
-{
-while(getEtatJeu()==Demarrer)
-{
-   while(
-{
-    //timer
-    for(int i=300;i > 0;i--)
-{
-    Sleep(1000);
-    tempsRestant = i;
-}
-} 
-} 
-}*/
       
 int Memory::getTempsMax()
 int Memory::tempsRestant()
@@ -61,7 +45,7 @@ virtual void Memory::demarrerPartie()
 
 virtual void Memory::abandonnerPartie()
 {
-
+   
 }
 
 virtual void Memory::terminerPartiePlusDeTemps()
@@ -96,5 +80,5 @@ virtual void Memory::setCoups(int nbCoups)
 
 virtual void Memory::getCoups()
 {
-
+   return this -> MemoryPrincipale::
 }
