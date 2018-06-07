@@ -10,14 +10,14 @@ virtual void Memory::setEtat(etatJeu UnEtatMemory)
    
 }
 
-virtual void Memory::setTempsMax(int tempsMax)
+virtual void Memory::setTempsMax(int temps)
 {
-
+      this -> tempsMax = temps;
 }
 
-virtual void Memory::setTempsRestant(int tempsRestant)
+virtual void Memory::setTempsRestant(int temps)
 {
-
+      this -> tempsRestant = temps;
 }
 
 virtual etatJeu Memory::getEtatJeu()
@@ -77,7 +77,7 @@ virtual void Memory::getPaireTrouvee()
 
 virtual void Memory::setCoups(int coups)
 {
-this->nbCoups = coups
+this->nbCoups = coups;
 }
 
 virtual void Memory::getCoups()
