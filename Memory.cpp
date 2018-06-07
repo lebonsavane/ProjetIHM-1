@@ -1,4 +1,6 @@
 #include "Memory.h"
+#include "MemoryApp.h"
+#include "MemoryPrincipale.h"
       
 int Memory::getTempsMax()
 int Memory::tempsRestant()
