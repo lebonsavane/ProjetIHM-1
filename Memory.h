@@ -10,7 +10,7 @@
 
 class Carte;
 
-class Memory {
+class Memory : public MemoryPrincipale, MemoryApp{
 
  public:
     virtual void actualisation();
